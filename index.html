@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="AL DAR FOOD - حلويات ومأكولات بيتية أصيلة، توصيل داخل هايلبرون ألمانيا">
+<meta name="description" content="AL DAR FOOD | حلويات ومأكولات بيتية أصيلة في Heilbronn، ألمانيا. بقلاوة، معمول، تيراميسو وكيك مناسبات — اطلب توصيل أو استلام.">
 <meta name="theme-color" content="#0d0f0b">
 <meta property="og:title" content="AL DAR FOOD">
 <meta property="og:description" content="حلويات ومأكولات بيتية أصيلة — توصيل داخل Heilbronn، ألمانيا">
@@ -11,7 +11,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AL DAR FOOD">
 <meta name="twitter:description" content="حلويات ومأكولات بيتية أصيلة — توصيل داخل Heilbronn، ألمانيا">
-<title>AL DAR FOOD</title>
+<title>AL DAR FOOD | حلويات ومأكولات بيتية في Heilbronn</title>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -160,7 +160,7 @@
     font-weight: 700;
   }
 
-  .wrap { max-width: 640px; margin: 0 auto; padding: 28px 18px calc(60px + 25vh); }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 28px 18px calc(120px + 20vh); }
 
   .lang-switcher {
     display: flex;
@@ -403,10 +403,10 @@
 
   .float-whats {
     position: fixed;
-    bottom: calc(18px + env(safe-area-inset-bottom, 0px));
-    left: 18px;
+    bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+    left: 14px;
     z-index: 50;
-    width: 54px; height: 54px;
+    width: 50px; height: 50px;
     border-radius: 50%;
     background: linear-gradient(135deg, #25D366, #1aa952);
     display: flex; align-items: center; justify-content: center;
@@ -419,26 +419,6 @@
     0%, 100% { box-shadow: 0 6px 18px rgba(37,211,102,0.35); }
     50% { box-shadow: 0 6px 26px rgba(37,211,102,0.65); }
   }
-
-  .float-top {
-    position: fixed;
-    bottom: calc(84px + env(safe-area-inset-bottom, 0px));
-    right: 18px;
-    z-index: 50;
-    width: 46px; height: 46px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid var(--border);
-    color: var(--gold-soft);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.2rem;
-    text-decoration: none;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-  }
-  .float-top.show { opacity: 1; pointer-events: auto; }
 
   .btn-share {
     background: rgba(255,255,255,0.06);
@@ -487,21 +467,6 @@
   .mi-add-btn:active { transform: scale(0.88); }
   .mi-add-btn.added { background: linear-gradient(135deg, #4f2b1b, #d4af6a); color: #17130c; }
 
-  /* ---- floating cart button ---- */
-  .float-cart {
-    position: fixed;
-    bottom: calc(18px + env(safe-area-inset-bottom, 0px));
-    right: 18px;
-    z-index: 50;
-    width: 54px; height: 54px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #4f2b1b, #d4af6a);
-    border: none;
-    display: flex; align-items: center; justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
-    color: #17130c;
-  }
   .cart-badge {
     position: absolute; top: -4px; inset-inline-end: -4px;
     background: #e0453f; color: #fff;
@@ -634,6 +599,13 @@
   .mi-badge.badge-best { background: rgba(224,69,63,0.18); color: #ff8a80; border: 1px solid rgba(224,69,63,0.4); }
   .mi-badge.badge-new { background: rgba(120,200,150,0.18); color: #8fe0ac; border: 1px solid rgba(120,200,150,0.4); }
 
+  .badge-legend {
+    display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;
+    font-size: 0.75rem; opacity: 0.75;
+    margin-bottom: 14px;
+  }
+  .badge-legend span { display: inline-flex; align-items: center; gap: 5px; }
+
   /* ---- toast ---- */
   .toast {
     position: fixed;
@@ -723,9 +695,145 @@
   .min-order-note {
     font-size: 0.76rem; margin-top: 8px; opacity: 0.75;
   }
+
+  /* ---- category tabs / search / sort ---- */
+  .menu-toolbar { margin-bottom: 14px; }
+  .search-box {
+    display: flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 9px 12px;
+    margin-bottom: 10px;
+  }
+  .search-box svg { flex-shrink: 0; opacity: 0.6; }
+  .search-box input {
+    flex: 1; background: none; border: none; outline: none;
+    color: var(--cream); font-family: 'Cairo', sans-serif; font-size: 0.88rem;
+  }
+  .search-box input::placeholder { color: rgba(244,234,217,0.4); }
+  .cat-tabs {
+    display: flex; gap: 7px; overflow-x: auto;
+    padding-bottom: 6px; margin-bottom: 10px;
+    scrollbar-width: none;
+  }
+  .cat-tabs::-webkit-scrollbar { display: none; }
+  .cat-tab {
+    flex-shrink: 0;
+    padding: 7px 13px; border-radius: 999px;
+    border: 1px solid var(--border); background: rgba(255,255,255,0.04);
+    color: var(--cream); font-size: 0.78rem; font-weight: 700;
+    cursor: pointer; white-space: nowrap; font-family: 'Cairo', sans-serif;
+  }
+  .cat-tab.active {
+    background: linear-gradient(135deg, #4f2b1b, #d4af6a);
+    color: #17130c; border-color: transparent;
+  }
+  .sort-row { display: flex; gap: 7px; overflow-x: auto; scrollbar-width: none; }
+  .sort-row::-webkit-scrollbar { display: none; }
+  .sort-btn {
+    flex-shrink: 0; padding: 6px 11px; border-radius: 8px;
+    border: 1px solid var(--border); background: rgba(255,255,255,0.03);
+    color: var(--cream); opacity: 0.75; font-size: 0.72rem;
+    cursor: pointer; white-space: nowrap; font-family: 'Cairo', sans-serif;
+  }
+  .sort-btn.active { opacity: 1; border-color: var(--gold); color: var(--gold-soft); }
+  .no-results { text-align: center; opacity: 0.6; font-size: 0.85rem; padding: 20px 0; display: none; }
+  .cakes-card {
+    display: none;
+    text-align: center; padding: 22px 14px;
+    border: 1px dashed var(--border); border-radius: 14px;
+    font-size: 0.88rem; line-height: 1.8;
+  }
+  .cakes-card a { color: var(--gold-soft); font-weight: 700; text-decoration: underline; }
+
+  /* ---- best sellers strip ---- */
+  .best-scroll {
+    display: flex; gap: 10px; overflow-x: auto; padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+  .best-scroll::-webkit-scrollbar { display: none; }
+  .best-card {
+    flex-shrink: 0; width: 132px;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 12px 10px; text-align: center;
+  }
+  .best-card .bc-emoji { font-size: 1.6rem; margin-bottom: 6px; }
+  .best-card .bc-name { font-size: 0.8rem; font-weight: 700; margin-bottom: 8px; min-height: 34px; }
+  .best-card button {
+    width: 100%; padding: 6px; border-radius: 8px; border: none;
+    background: linear-gradient(135deg, #4f2b1b, #d4af6a); color: #17130c;
+    font-weight: 700; font-size: 0.76rem; cursor: pointer; font-family: 'Cairo', sans-serif;
+  }
+
+  /* ---- occasion cards ---- */
+  .occasion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .occasion-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 18px 10px; text-align: center;
+    cursor: pointer; text-decoration: none; color: var(--cream);
+    transition: transform 0.15s ease;
+  }
+  .occasion-card:active { transform: scale(0.96); }
+  .occasion-card .oc-emoji { font-size: 1.8rem; margin-bottom: 8px; }
+  .occasion-card .oc-label { font-size: 0.85rem; font-weight: 700; }
+
+  /* ---- bottom navigation (mobile) ---- */
+  .bottom-nav {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+    display: flex;
+    background: rgba(13,15,11,0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--border);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .bn-item {
+    flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px;
+    padding: 9px 4px 8px;
+    background: none; border: none; color: var(--cream); opacity: 0.65;
+    font-family: 'Cairo', sans-serif; font-size: 0.66rem; font-weight: 700;
+    cursor: pointer; position: relative;
+  }
+  .bn-item.active { opacity: 1; color: var(--gold-soft); }
+  .bn-item svg { width: 21px; height: 21px; }
+  .bn-badge {
+    position: absolute; top: 3px; inset-inline-end: 22%;
+    background: #e0453f; color: #fff; font-size: 0.6rem; font-weight: 800;
+    min-width: 15px; height: 15px; border-radius: 999px;
+    display: flex; align-items: center; justify-content: center; padding: 0 3px;
+  }
+
+  /* ---- sticky cart summary bar ---- */
+  .sticky-cart-bar {
+    position: fixed; left: 12px; right: 12px;
+    bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+    z-index: 55;
+    display: none;
+    align-items: center; justify-content: space-between;
+    background: linear-gradient(135deg, #4f2b1b, #d4af6a);
+    color: #17130c;
+    border-radius: 14px;
+    padding: 12px 16px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.4);
+    font-weight: 700; font-size: 0.85rem;
+    cursor: pointer;
+  }
+  .sticky-cart-bar.show { display: flex; }
+
+  /* ---- loading splash ---- */
+  .splash {
+    position: fixed; inset: 0; z-index: 200;
+    background: var(--bg);
+    display: flex; align-items: center; justify-content: center;
+    transition: opacity 0.5s ease;
+  }
+  .splash img { width: 90px; height: 90px; border-radius: 50%; animation: logoIn 0.6s ease-out; }
+  .splash.hide { opacity: 0; pointer-events: none; }
 </style>
 </head>
 <body>
+
+<div class="splash" id="splash"><img id="splashLogo" alt="AL DAR FOOD"></div>
 
 <div class="bg-anim"></div>
 <div class="particles" id="particles"></div>
@@ -733,14 +841,31 @@
 <a class="float-whats" href="https://wa.me/491631327157" target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M17.6 6.3A8.9 8.9 0 0 0 12.04 3.6 8.9 8.9 0 0 0 3.5 12.07c0 1.57.41 3.1 1.19 4.45L3.6 20.4l4-1.05a8.9 8.9 0 0 0 4.44 1.13h.01a8.9 8.9 0 0 0 8.9-8.9c0-2.38-.93-4.62-2.35-6.28ZM12.04 19.05a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.83.74.76-2.76-.18-.28a7.4 7.4 0 0 1-1.13-3.94 7.4 7.4 0 0 1 12.65-5.24 7.36 7.36 0 0 1 2.18 5.24 7.4 7.4 0 0 1-7.4 7.44Zm4.06-5.55c-.22-.11-1.3-.64-1.5-.72-.2-.07-.35-.11-.5.11-.15.22-.57.72-.7.87-.13.15-.26.16-.48.05-.22-.11-.94-.35-1.79-1.1a6.7 6.7 0 0 1-1.24-1.54c-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.39-.06-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43c-.15 0-.39.06-.6.28-.2.22-.79.77-.79 1.87s.81 2.17.93 2.32c.11.15 1.6 2.45 3.89 3.43.54.24.97.38 1.3.48.55.17 1.04.15 1.44.09.44-.07 1.3-.53 1.48-1.04.18-.51.18-.95.13-1.04-.05-.09-.2-.15-.42-.26Z"/></svg>
 </a>
-<button class="float-top" id="backToTop" aria-label="Back to top">
-  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>
-</button>
 
-<button class="float-cart" id="cartBtn" aria-label="Cart">
-  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-  <span class="cart-badge" id="cartBadge" style="display:none;">0</span>
-</button>
+<div class="sticky-cart-bar" id="stickyCartBar">
+  <span id="stickyCartText">🛒 0</span>
+  <span id="stickyCartArrow">عرض السلة ←</span>
+</div>
+
+<nav class="bottom-nav">
+  <button class="bn-item active" id="bnHome" type="button">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+    <span data-key="bnHome">الرئيسية</span>
+  </button>
+  <button class="bn-item" id="bnMenu" type="button">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    <span data-key="navMenu">المينيو</span>
+  </button>
+  <button class="bn-item" id="bnCart" type="button">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+    <span class="bn-badge" id="cartBadge" style="display:none;">0</span>
+    <span data-key="bnCart">السلة</span>
+  </button>
+  <button class="bn-item" id="bnContact" type="button">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.99.36 1.96.68 2.9a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.18-1.18a2 2 0 0 1 2.11-.45c.94.32 1.91.55 2.9.68A2 2 0 0 1 22 16.92Z"/></svg>
+    <span data-key="navContact">تواصل</span>
+  </button>
+</nav>
 
 <div class="toast" id="toast"></div>
 
@@ -762,7 +887,7 @@
     </div>
     <div class="option-group">
       <label class="option-group-label" for="optionsNote" data-key="optionsNoteLabel">ملاحظات خاصة (اختياري)</label>
-      <textarea id="optionsNote" rows="2" placeholder=""></textarea>
+      <textarea id="optionsNote" rows="2" data-key-placeholder="optionsNotePlaceholder" placeholder=""></textarea>
     </div>
     <div class="option-group" style="display:flex; align-items:center; justify-content:space-between;">
       <span class="option-group-label" style="margin:0;" data-key="optionsQtyLabel">الكمية</span>
@@ -834,6 +959,7 @@
     </div>
 
     <div id="invoiceView" style="display:none;">
+      <div style="text-align:center; font-weight:800; color:var(--gold-soft); margin-bottom:10px; font-size:1rem;" id="orderNumberDisplay"></div>
       <div class="invoice-box" id="invoiceText"></div>
       <div class="note-box" style="margin-top:10px;" data-key="paymentNote">💳 سيتم إرسال رابط الدفع البنكي من المطعم عبر واتساب لإتمام عملية الدفع.</div>
       <div class="invoice-actions">
@@ -896,28 +1022,81 @@
     <span id="storeStatusText">—</span>
   </div>
 
+  <section class="reveal" id="best-section">
+    <h2 class="section-title" data-key="bestSectionTitle">⭐ الأكثر طلبًا هذا الأسبوع</h2>
+    <div class="best-scroll" id="bestScroll"></div>
+  </section>
+
   <section class="reveal" id="menu-section">
     <h2 class="section-title" data-key="menuTitle">قائمة الحلويات</h2>
     <p class="section-sub" data-key="menuSub">Sweet Menu</p>
+    <div class="badge-legend">
+      <span>🔥 <span data-key="legendBest">الأكثر طلباً</span></span>
+      <span>✨ <span data-key="legendNew">جديد</span></span>
+    </div>
+
+    <div class="menu-toolbar">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="text" id="menuSearch" data-key-placeholder="searchPlaceholder" placeholder="ابحث عن طبق...">
+      </div>
+      <div class="cat-tabs" id="catTabs">
+        <button class="cat-tab active" data-cat="all" type="button">🍽️ <span data-key="catAll">الكل</span></button>
+        <button class="cat-tab" data-cat="sweets" type="button">🍰 <span data-key="catSweets">حلويات</span></button>
+        <button class="cat-tab" data-cat="cakes" type="button">🎂 <span data-key="catCakes">كيك المناسبات</span></button>
+        <button class="cat-tab" data-cat="maamoul" type="button">🥮 <span data-key="catMaamoul">معمول وكليجة</span></button>
+        <button class="cat-tab" data-cat="cold" type="button">🍮 <span data-key="catCold">حلويات باردة</span></button>
+        <button class="cat-tab" data-cat="best" type="button">⭐ <span data-key="catBest">الأكثر طلبًا</span></button>
+      </div>
+      <div class="sort-row" id="sortRow">
+        <button class="sort-btn active" data-sort="default" type="button" data-key="sortDefault">افتراضي</button>
+        <button class="sort-btn" data-sort="best" type="button" data-key="sortBest">الأكثر طلبًا</button>
+        <button class="sort-btn" data-sort="new" type="button" data-key="sortNew">الجديد أولاً</button>
+      </div>
+    </div>
+
     <div class="menu-card">
+      <div class="cakes-card" id="cakesCard" data-key="cakesCardText">
+        🎂 كيك المناسبات يُحضّر خصيصًا حسب طلبك (الشكل، الحشوة، عدد الأشخاص). تصفح
+        <a href="#gallery-section" id="cakesGalleryLink">معرض أعمالنا</a> وتواصل معنا مباشرة عبر واتساب لتفاصيل السعر والتصميم.
+      </div>
+      <div class="no-results" id="noResults" data-key="noResultsText">لا توجد أطباق مطابقة لبحثك</div>
       <ul class="menu-list" id="menuList">
-        <li class="menu-item-row" data-id="item1" style="--i:1"><span class="mi-name" data-key="item1">بقلاوة</span><span class="mi-badge badge-best">🔥</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item1" type="button" aria-label="add">+</button></li>
-        <li class="menu-item-row" data-id="item2" style="--i:2"><span class="mi-name" data-key="item2">قطايف: قشطة، تمر، مربى</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item2" type="button" aria-label="add">+</button></li>
-        <li class="menu-item-row" data-id="item3" style="--i:3"><span class="mi-name" data-key="item3">معمول</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item3" type="button" aria-label="add">+</button></li>
-        <li class="menu-item-row" data-id="item4" style="--i:4"><span class="mi-name" data-key="item4">كليجة</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item4" type="button" aria-label="add">+</button></li>
-        <li class="menu-item-row" data-id="item5" style="--i:5"><span class="mi-name" data-key="item5">اصابع التمر بالسمسم</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item5" type="button" aria-label="add">+</button></li>
-        <li class="menu-item-row" data-id="item6" style="--i:6"><span class="mi-name" data-key="item6">وربات بالقشطة</span><span class="mi-badge badge-new">✨</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item6" type="button" aria-label="add">+</button></li>
-        <li class="menu-item-row" data-id="item7" style="--i:7"><span class="mi-name" data-key="item7">تيراميسو</span><span class="mi-badge badge-best">🔥</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item7" type="button" aria-label="add">+</button></li>
-        <li class="menu-item-row" data-id="item8" style="--i:8"><span class="mi-name" data-key="item8">حلاوة الجبن</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item8" type="button" aria-label="add">+</button></li>
-        <li class="menu-item-row" data-id="item9" style="--i:9"><span class="mi-name" data-key="item9">هريسة</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item9" type="button" aria-label="add">+</button></li>
-        <li class="menu-item-row" data-id="item10" style="--i:10"><span class="mi-name" data-key="item10">بسبوسة</span><span class="mi-badge badge-best">🔥</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item10" type="button" aria-label="add">+</button></li>
-        <li class="menu-item-row" data-id="item11" style="--i:11"><span class="mi-name" data-key="item11">مهلبية</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item11" type="button" aria-label="add">+</button></li>
-        <li class="menu-item-row" data-id="item12" style="--i:12"><span class="mi-name" data-key="item12">رز بحليب</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item12" type="button" aria-label="add">+</button></li>
-        <li class="menu-item-row" data-id="item13" style="--i:13"><span class="mi-name" data-key="item13">سكسونية</span><span class="mi-badge badge-new">✨</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item13" type="button" aria-label="add">+</button></li>
-        <li class="menu-item-row" data-id="item14" style="--i:14"><span class="mi-name" data-key="item14">مشبك</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item14" type="button" aria-label="add">+</button></li>
-        <li class="menu-item-row" data-id="item15" style="--i:15"><span class="mi-name" data-key="item15">عوامة</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item15" type="button" aria-label="add">+</button></li>
+        <li class="menu-item-row" data-id="item1" data-category="sweets" data-badge="best" style="--i:1"><span class="mi-name" data-key="item1">بقلاوة</span><span class="mi-badge badge-best">🔥</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item1" type="button" aria-label="add">+</button></li>
+        <li class="menu-item-row" data-id="item2" data-category="maamoul" data-badge="none" style="--i:2"><span class="mi-name" data-key="item2">قطايف: قشطة، تمر، مربى</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item2" type="button" aria-label="add">+</button></li>
+        <li class="menu-item-row" data-id="item3" data-category="maamoul" data-badge="none" style="--i:3"><span class="mi-name" data-key="item3">معمول</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item3" type="button" aria-label="add">+</button></li>
+        <li class="menu-item-row" data-id="item4" data-category="maamoul" data-badge="none" style="--i:4"><span class="mi-name" data-key="item4">كليجة</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item4" type="button" aria-label="add">+</button></li>
+        <li class="menu-item-row" data-id="item5" data-category="maamoul" data-badge="none" style="--i:5"><span class="mi-name" data-key="item5">اصابع التمر بالسمسم</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item5" type="button" aria-label="add">+</button></li>
+        <li class="menu-item-row" data-id="item6" data-category="maamoul" data-badge="new" style="--i:6"><span class="mi-name" data-key="item6">وربات بالقشطة</span><span class="mi-badge badge-new">✨</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item6" type="button" aria-label="add">+</button></li>
+        <li class="menu-item-row" data-id="item7" data-category="sweets" data-badge="best" style="--i:7"><span class="mi-name" data-key="item7">تيراميسو</span><span class="mi-badge badge-best">🔥</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item7" type="button" aria-label="add">+</button></li>
+        <li class="menu-item-row" data-id="item8" data-category="sweets" data-badge="none" style="--i:8"><span class="mi-name" data-key="item8">حلاوة الجبن</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item8" type="button" aria-label="add">+</button></li>
+        <li class="menu-item-row" data-id="item9" data-category="sweets" data-badge="none" style="--i:9"><span class="mi-name" data-key="item9">هريسة</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item9" type="button" aria-label="add">+</button></li>
+        <li class="menu-item-row" data-id="item10" data-category="sweets" data-badge="best" style="--i:10"><span class="mi-name" data-key="item10">بسبوسة</span><span class="mi-badge badge-best">🔥</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item10" type="button" aria-label="add">+</button></li>
+        <li class="menu-item-row" data-id="item11" data-category="cold" data-badge="none" style="--i:11"><span class="mi-name" data-key="item11">مهلبية</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item11" type="button" aria-label="add">+</button></li>
+        <li class="menu-item-row" data-id="item12" data-category="cold" data-badge="none" style="--i:12"><span class="mi-name" data-key="item12">رز بحليب</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item12" type="button" aria-label="add">+</button></li>
+        <li class="menu-item-row" data-id="item13" data-category="sweets" data-badge="new" style="--i:13"><span class="mi-name" data-key="item13">سكسونية</span><span class="mi-badge badge-new">✨</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item13" type="button" aria-label="add">+</button></li>
+        <li class="menu-item-row" data-id="item14" data-category="sweets" data-badge="none" style="--i:14"><span class="mi-name" data-key="item14">مشبك</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item14" type="button" aria-label="add">+</button></li>
+        <li class="menu-item-row" data-id="item15" data-category="sweets" data-badge="none" style="--i:15"><span class="mi-name" data-key="item15">عوامة</span><span class="mi-price" data-key="priceTBD">قريبًا</span><button class="mi-add-btn" data-id="item15" type="button" aria-label="add">+</button></li>
       </ul>
       <div class="menu-note" data-key="menuNote">🎂 كيك مناسبات وأعياد ميلاد</div>
+    </div>
+  </section>
+
+  <section class="reveal" id="occasion-section">
+    <h2 class="section-title" data-key="occasionTitle">🎉 لمناسبتك</h2>
+    <div class="occasion-grid">
+      <a class="occasion-card" href="https://wa.me/491631327157?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%B7%D9%84%D8%A8%20%D9%84%D8%B9%D9%8A%D8%AF%20%D9%85%D9%8A%D9%84%D8%A7%D8%AF" target="_blank" rel="noopener">
+        <div class="oc-emoji">🎂</div><div class="oc-label" data-key="occBirthday">أعياد ميلاد</div>
+      </a>
+      <a class="occasion-card" href="https://wa.me/491631327157?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%B7%D9%84%D8%A8%20%D9%84%D9%85%D9%86%D8%A7%D8%B3%D8%A8%D8%A9" target="_blank" rel="noopener">
+        <div class="oc-emoji">💍</div><div class="oc-label" data-key="occEvent">مناسبات</div>
+      </a>
+      <a class="occasion-card" href="https://wa.me/491631327157?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%B7%D9%84%D8%A8%20%D9%87%D8%AF%D8%A7%D9%8A%D8%A7" target="_blank" rel="noopener">
+        <div class="oc-emoji">🎁</div><div class="oc-label" data-key="occGift">هدايا</div>
+      </a>
+      <a class="occasion-card" href="https://wa.me/491631327157?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%B7%D9%84%D8%A8%20%D9%84%D9%84%D8%B6%D9%8A%D8%A7%D9%81%D8%A9" target="_blank" rel="noopener">
+        <div class="oc-emoji">☕</div><div class="oc-label" data-key="occHospitality">ضيافة</div>
+      </a>
     </div>
   </section>
 
@@ -1124,6 +1303,30 @@
       storeClosedText: "مغلق حالياً",
       closedMessage: "⏰ نستقبل الطلبات خلال أوقات العمل من الساعة 12 ظهرًا حتى 12 منتصف الليل بتوقيت Heilbronn.",
       manualOverrideNote: "(تحكم يدوي على هذا الجهاز)",
+      legendBest: "الأكثر طلباً",
+      legendNew: "جديد",
+      searchPlaceholder: "ابحث عن طبق... (مثال: بقلاوة)",
+      optionsNotePlaceholder: "مثال: أقل تحلية، بدون مكسرات...",
+      catAll: "الكل",
+      catSweets: "حلويات",
+      catCakes: "كيك المناسبات",
+      catMaamoul: "معمول وكليجة",
+      catCold: "حلويات باردة",
+      catBest: "الأكثر طلبًا",
+      sortDefault: "افتراضي",
+      sortBest: "الأكثر طلبًا",
+      sortNew: "الجديد أولاً",
+      noResultsText: "لا توجد أطباق مطابقة لبحثك",
+      cakesCardText: "🎂 كيك المناسبات يُحضّر خصيصًا حسب طلبك (الشكل، الحشوة، عدد الأشخاص). تصفح <a href=\"#gallery-section\">معرض أعمالنا</a> وتواصل معنا مباشرة عبر واتساب لتفاصيل السعر والتصميم.",
+      bestSectionTitle: "⭐ الأكثر طلبًا هذا الأسبوع",
+      occasionTitle: "🎉 لمناسبتك",
+      occBirthday: "أعياد ميلاد",
+      occEvent: "مناسبات",
+      occGift: "هدايا",
+      occHospitality: "ضيافة",
+      bnHome: "الرئيسية",
+      bnCart: "السلة",
+      orderNumberLabel: "رقم الطلب",
       menuNote: "🎂 كيك مناسبات وأعياد ميلاد",
       galleryTitle: "من أعمالنا",
       gallerySub: "لمحة من إبداعاتنا الحلوة",
@@ -1203,6 +1406,30 @@
       storeClosedText: "Currently Closed",
       closedMessage: "⏰ We accept orders from 12 PM to 12 AM, Heilbronn time.",
       manualOverrideNote: "(manual override on this device)",
+      legendBest: "Best Seller",
+      legendNew: "New",
+      searchPlaceholder: "Search a dish... (e.g. Baklava)",
+      optionsNotePlaceholder: "e.g. less sweet, no nuts...",
+      catAll: "All",
+      catSweets: "Sweets",
+      catCakes: "Occasion Cakes",
+      catMaamoul: "Maamoul & Kleicha",
+      catCold: "Cold Desserts",
+      catBest: "Best Sellers",
+      sortDefault: "Default",
+      sortBest: "Best Sellers",
+      sortNew: "Newest First",
+      noResultsText: "No dishes match your search",
+      cakesCardText: "🎂 Occasion cakes are custom-made to order (shape, filling, number of guests). Browse our <a href=\"#gallery-section\">gallery</a> and contact us directly on WhatsApp for pricing and design details.",
+      bestSectionTitle: "⭐ Best Sellers This Week",
+      occasionTitle: "🎉 For Your Occasion",
+      occBirthday: "Birthdays",
+      occEvent: "Events",
+      occGift: "Gifts",
+      occHospitality: "Hospitality",
+      bnHome: "Home",
+      bnCart: "Cart",
+      orderNumberLabel: "Order Number",
       menuNote: "🎂 Occasion & birthday cakes",
       galleryTitle: "Our Creations",
       gallerySub: "A glimpse of our sweet creations",
@@ -1282,6 +1509,30 @@
       storeClosedText: "Derzeit geschlossen",
       closedMessage: "⏰ Wir nehmen Bestellungen von 12 bis 24 Uhr (Heilbronner Zeit) entgegen.",
       manualOverrideNote: "(manuelle Steuerung auf diesem Gerät)",
+      legendBest: "Bestseller",
+      legendNew: "Neu",
+      searchPlaceholder: "Gericht suchen... (z.B. Baklava)",
+      optionsNotePlaceholder: "z.B. weniger süß, ohne Nüsse...",
+      catAll: "Alle",
+      catSweets: "Süßigkeiten",
+      catCakes: "Anlass-Torten",
+      catMaamoul: "Maamoul & Kleicha",
+      catCold: "Kalte Desserts",
+      catBest: "Bestseller",
+      sortDefault: "Standard",
+      sortBest: "Bestseller",
+      sortNew: "Neueste zuerst",
+      noResultsText: "Keine passenden Gerichte gefunden",
+      cakesCardText: "🎂 Anlass-Torten werden individuell nach Ihren Wünschen angefertigt (Form, Füllung, Personenanzahl). Durchstöbern Sie unsere <a href=\"#gallery-section\">Galerie</a> und kontaktieren Sie uns direkt per WhatsApp für Preise und Designdetails.",
+      bestSectionTitle: "⭐ Bestseller dieser Woche",
+      occasionTitle: "🎉 Für Ihren Anlass",
+      occBirthday: "Geburtstage",
+      occEvent: "Veranstaltungen",
+      occGift: "Geschenke",
+      occHospitality: "Bewirtung",
+      bnHome: "Start",
+      bnCart: "Warenkorb",
+      orderNumberLabel: "Bestellnummer",
       menuNote: "🎂 Anlass- & Geburtstagstorten",
       galleryTitle: "Unsere Kreationen",
       gallerySub: "Ein Einblick in unsere süßen Kreationen",
@@ -1312,6 +1563,10 @@
         el.style.opacity = '1';
       });
     }, 180);
+    document.querySelectorAll('[data-key-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-key-placeholder');
+      if (dict[key] !== undefined) el.setAttribute('placeholder', dict[key]);
+    });
     document.documentElement.lang = lang;
     document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
     document.querySelectorAll('.lang-btn').forEach(b => {
@@ -1323,7 +1578,10 @@
   }
 
   document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => setLanguage(btn.getAttribute('data-lang')));
+    btn.addEventListener('click', () => {
+      setLanguage(btn.getAttribute('data-lang'));
+      setTimeout(() => { renderBestSellers(); applyMenuFilters(); }, 190);
+    });
   });
 
   let savedLang = 'ar';
@@ -1348,13 +1606,41 @@
     revealEls.forEach(el => el.classList.add('in-view'));
   }
 
-  // back to top button
-  const backToTop = document.getElementById('backToTop');
-  window.addEventListener('scroll', () => {
-    backToTop.classList.toggle('show', window.scrollY > 400);
-  });
-  backToTop.addEventListener('click', () => {
+  // splash screen
+  const splash = document.getElementById('splash');
+  const splashLogo = document.getElementById('splashLogo');
+  const mainLogoEl = document.querySelector('.logo');
+  if (mainLogoEl && splashLogo) splashLogo.src = mainLogoEl.src;
+  setTimeout(() => { splash.classList.add('hide'); }, 650);
+
+  // bottom nav: home scrolls to top
+  document.getElementById('bnHome').addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  document.getElementById('bnMenu').addEventListener('click', () => {
+    scrollToSection(document.getElementById('menu-section'));
+  });
+  document.getElementById('bnContact').addEventListener('click', () => {
+    scrollToSection(document.getElementById('contact-section'));
+  });
+
+  // highlight active bottom-nav tab based on scroll position
+  const bnItems = { home: document.getElementById('bnHome'), menu: document.getElementById('bnMenu'), contact: document.getElementById('bnContact') };
+  function setActiveBn(key) {
+    Object.values(bnItems).forEach(el => el.classList.remove('active'));
+    if (bnItems[key]) bnItems[key].classList.add('active');
+  }
+  const bnSections = [
+    { key: 'menu', el: document.getElementById('menu-section') },
+    { key: 'contact', el: document.getElementById('contact-section') }
+  ].filter(s => s.el);
+  window.addEventListener('scroll', () => {
+    if (window.scrollY < 200) { setActiveBn('home'); return; }
+    let current = 'home';
+    bnSections.forEach(s => {
+      if (window.scrollY + 120 >= s.el.offsetTop) current = s.key;
+    });
+    setActiveBn(current);
   });
 
   // mini sticky nav
@@ -1429,24 +1715,242 @@
     } catch (e) { /* clipboard unavailable, ignore */ }
   });
 
-  // ---- shopping cart / order system ----
-  const MENU_ITEM_IDS = ['item1','item2','item3','item4','item5','item6','item7','item8','item9','item10','item11','item12','item13','item14','item15'];
-  const cart = {};
-  MENU_ITEM_IDS.forEach(id => cart[id] = 0);
+  // ---- item options data (sizes / add-ons per dish) ----
+  const ITEM_OPTIONS = {
+    item1:  { sizes: [{ar:'قطعة واحدة',en:'Single piece',de:'Ein Stück'},{ar:'نصف كيلو',en:'Half kilo',de:'Halbes Kilo'},{ar:'كيلو كامل',en:'Full kilo',de:'Ein Kilo'}],
+              addons: [{ar:'مكسرات إضافية',en:'Extra nuts',de:'Extra Nüsse'},{ar:'عسل إضافي',en:'Extra honey',de:'Extra Honig'}] },
+    item2:  { sizes: [{ar:'حشوة قشطة',en:'Cream filling',de:'Sahnefüllung'},{ar:'حشوة تمر',en:'Date filling',de:'Dattelfüllung'},{ar:'حشوة مربى',en:'Jam filling',de:'Marmeladenfüllung'}],
+              addons: [{ar:'قشطة إضافية',en:'Extra cream',de:'Extra Sahne'},{ar:'مكسرات',en:'Nuts',de:'Nüsse'}] },
+    item3:  { sizes: [{ar:'حشوة تمر',en:'Date filling',de:'Dattelfüllung'},{ar:'حشوة جوز',en:'Walnut filling',de:'Walnussfüllung'},{ar:'حشوة فستق',en:'Pistachio filling',de:'Pistazienfüllung'}],
+              addons: [{ar:'تغليف هدية',en:'Gift wrapping',de:'Geschenkverpackung'},{ar:'مكسرات إضافية',en:'Extra nuts',de:'Extra Nüsse'}] },
+    item4:  { sizes: [{ar:'6 قطع',en:'6 pieces',de:'6 Stück'},{ar:'12 قطعة',en:'12 pieces',de:'12 Stück'},{ar:'24 قطعة',en:'24 pieces',de:'24 Stück'}],
+              addons: [{ar:'مكسرات إضافية',en:'Extra nuts',de:'Extra Nüsse'}] },
+    item5:  { sizes: [{ar:'10 حبات',en:'10 pieces',de:'10 Stück'},{ar:'20 حبة',en:'20 pieces',de:'20 Stück'},{ar:'30 حبة',en:'30 pieces',de:'30 Stück'}],
+              addons: [{ar:'سمسم إضافي',en:'Extra sesame',de:'Extra Sesam'}] },
+    item6:  { sizes: [{ar:'6 قطع',en:'6 pieces',de:'6 Stück'},{ar:'12 قطعة',en:'12 pieces',de:'12 Stück'},{ar:'18 قطعة',en:'18 pieces',de:'18 Stück'}],
+              addons: [{ar:'قشطة إضافية',en:'Extra cream',de:'Extra Sahne'}] },
+    item7:  { sizes: [{ar:'قطعة واحدة',en:'Single slice',de:'Ein Stück'},{ar:'نصف صينية',en:'Half tray',de:'Halbes Blech'},{ar:'صينية كاملة',en:'Full tray',de:'Ganzes Blech'}],
+              addons: [{ar:'كاكاو إضافي',en:'Extra cocoa',de:'Extra Kakao'},{ar:'كريمة إضافية',en:'Extra cream',de:'Extra Sahne'}] },
+    item8:  { sizes: [{ar:'قطعة واحدة',en:'Single slice',de:'Ein Stück'},{ar:'نصف صينية',en:'Half tray',de:'Halbes Blech'},{ar:'صينية كاملة',en:'Full tray',de:'Ganzes Blech'}],
+              addons: [{ar:'قطر إضافي',en:'Extra syrup',de:'Extra Sirup'}] },
+    item9:  { sizes: [{ar:'قطعة واحدة',en:'Single slice',de:'Ein Stück'},{ar:'نصف صينية',en:'Half tray',de:'Halbes Blech'},{ar:'صينية كاملة',en:'Full tray',de:'Ganzes Blech'}],
+              addons: [{ar:'جوز هند إضافي',en:'Extra coconut',de:'Extra Kokos'}] },
+    item10: { sizes: [{ar:'قطعة واحدة',en:'Single slice',de:'Ein Stück'},{ar:'نصف صينية',en:'Half tray',de:'Halbes Blech'},{ar:'صينية كاملة',en:'Full tray',de:'Ganzes Blech'}],
+              addons: [{ar:'قطر إضافي',en:'Extra syrup',de:'Extra Sirup'},{ar:'مكسرات',en:'Nuts',de:'Nüsse'}] },
+    item11: { sizes: [{ar:'كوب صغير',en:'Small cup',de:'Kleiner Becher'},{ar:'كوب وسط',en:'Medium cup',de:'Mittlerer Becher'},{ar:'كوب كبير',en:'Large cup',de:'Großer Becher'}],
+              addons: [{ar:'فستق مطحون',en:'Ground pistachio',de:'Gemahlene Pistazien'},{ar:'ماء ورد إضافي',en:'Extra rose water',de:'Extra Rosenwasser'}] },
+    item12: { sizes: [{ar:'كوب صغير',en:'Small cup',de:'Kleiner Becher'},{ar:'كوب وسط',en:'Medium cup',de:'Mittlerer Becher'},{ar:'كوب كبير',en:'Large cup',de:'Großer Becher'}],
+              addons: [{ar:'قرفة إضافية',en:'Extra cinnamon',de:'Extra Zimt'},{ar:'مكسرات',en:'Nuts',de:'Nüsse'}] },
+    item13: { sizes: [{ar:'قطعة واحدة',en:'Single slice',de:'Ein Stück'},{ar:'نصف صينية',en:'Half tray',de:'Halbes Blech'},{ar:'صينية كاملة',en:'Full tray',de:'Ganzes Blech'}],
+              addons: [{ar:'مكسرات إضافية',en:'Extra nuts',de:'Extra Nüsse'}] },
+    item14: { sizes: [{ar:'10 حبات',en:'10 pieces',de:'10 Stück'},{ar:'20 حبة',en:'20 pieces',de:'20 Stück'},{ar:'30 حبة',en:'30 pieces',de:'30 Stück'}],
+              addons: [{ar:'قطر إضافي',en:'Extra syrup',de:'Extra Sirup'}] },
+    item15: { sizes: [{ar:'10 حبات',en:'10 pieces',de:'10 Stück'},{ar:'20 حبة',en:'20 pieces',de:'20 Stück'},{ar:'30 حبة',en:'30 pieces',de:'30 Stück'}],
+              addons: [{ar:'قطر إضافي',en:'Extra syrup',de:'Extra Sirup'},{ar:'قرفة',en:'Cinnamon',de:'Zimt'}] }
+  };
 
-  let selectedDelivery = null; // 'pickup' | 'delivery'
-  let selectedDonation = 0;
-  let donationMode = 'fixed'; // 'fixed' | 'custom'
+  const MENU_ITEM_IDS = Object.keys(ITEM_OPTIONS);
+  let cartLines = []; // {uid, itemId, sizeIdx, addonIdxs:[], note, qty}
+  let uidCounter = 1;
 
   function currentDict() {
     return translations[document.documentElement.lang] || translations.ar;
   }
+  function localField(obj) {
+    const lang = document.documentElement.lang;
+    return obj[lang] || obj.ar;
+  }
+
+  // ---- menu filtering: category tabs, search, sort ----
+  const BEST_IDS = MENU_ITEM_IDS.filter(id => document.querySelector(`.menu-item-row[data-id="${id}"]`).getAttribute('data-badge') === 'best');
+  let activeCategory = 'all';
+  let activeSort = 'default';
+  let searchQuery = '';
+
+  function applyMenuFilters() {
+    const dict = currentDict();
+    const rows = Array.from(document.querySelectorAll('.menu-item-row'));
+    const cakesCard = document.getElementById('cakesCard');
+    const noResults = document.getElementById('noResults');
+    const list = document.getElementById('menuList');
+
+    if (activeCategory === 'cakes' && !searchQuery) {
+      rows.forEach(r => r.style.display = 'none');
+      cakesCard.style.display = 'block';
+      noResults.style.display = 'none';
+      return;
+    }
+    cakesCard.style.display = 'none';
+
+    let visibleCount = 0;
+    rows.forEach(row => {
+      const id = row.getAttribute('data-id');
+      const cat = row.getAttribute('data-category');
+      const badge = row.getAttribute('data-badge');
+      const name = dict[id] || '';
+      let visible = true;
+
+      if (searchQuery) {
+        visible = name.toLowerCase().includes(searchQuery.toLowerCase());
+      } else if (activeCategory !== 'all') {
+        visible = activeCategory === 'best' ? badge === 'best' : cat === activeCategory;
+      }
+      row.style.display = visible ? 'flex' : 'none';
+      if (visible) visibleCount++;
+    });
+
+    noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+
+    // sorting: reorder visible rows within the list
+    const sorted = rows.slice().sort((a, b) => {
+      if (activeSort === 'default') return 0;
+      const aBadge = a.getAttribute('data-badge');
+      const bBadge = b.getAttribute('data-badge');
+      if (activeSort === 'best') {
+        return (bBadge === 'best' ? 1 : 0) - (aBadge === 'best' ? 1 : 0);
+      }
+      if (activeSort === 'new') {
+        return (bBadge === 'new' ? 1 : 0) - (aBadge === 'new' ? 1 : 0);
+      }
+      return 0;
+    });
+    sorted.forEach(row => list.appendChild(row));
+  }
+
+  document.getElementById('menuSearch').addEventListener('input', (e) => {
+    searchQuery = e.target.value.trim();
+    if (searchQuery) {
+      activeCategory = 'all';
+      document.querySelectorAll('.cat-tab').forEach(t => t.classList.toggle('active', t.getAttribute('data-cat') === 'all'));
+    }
+    applyMenuFilters();
+  });
+
+  document.querySelectorAll('.cat-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      activeCategory = tab.getAttribute('data-cat');
+      document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      searchQuery = '';
+      document.getElementById('menuSearch').value = '';
+      applyMenuFilters();
+    });
+  });
+
+  document.querySelectorAll('.sort-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeSort = btn.getAttribute('data-sort');
+      document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyMenuFilters();
+    });
+  });
+
+  // ---- best sellers strip ----
+  function renderBestSellers() {
+    const dict = currentDict();
+    const scroll = document.getElementById('bestScroll');
+    scroll.innerHTML = BEST_IDS.map(id => `
+      <div class="best-card">
+        <div class="bc-emoji">🔥</div>
+        <div class="bc-name">${dict[id]}</div>
+        <button type="button" class="best-add-btn" data-id="${id}">+</button>
+      </div>
+    `).join('');
+    scroll.querySelectorAll('.best-add-btn').forEach(btn => {
+      btn.addEventListener('click', () => openOptionsDrawer(btn.getAttribute('data-id')));
+    });
+  }
+  renderBestSellers();
+  applyMenuFilters();
+
+
+  // ---- toast ----
+  let toastTimer = null;
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    clearTimeout(toastTimer);
+    toast.textContent = msg;
+    toast.classList.add('show');
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+  }
+
+  // ---- store open/closed status ----
+  function isWithinOpenHours() {
+    try {
+      const parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Berlin', hour: '2-digit', hour12: false }).formatToParts(new Date());
+      const hour = parseInt(parts.find(p => p.type === 'hour').value, 10);
+      return hour >= 12 && hour < 24;
+    } catch (e) { return true; }
+  }
+  function getManualOverride() {
+    try { return localStorage.getItem('aldarfood_manual_status'); } catch (e) { return null; }
+  }
+  function isStoreOpen() {
+    const override = getManualOverride();
+    if (override === 'open') return true;
+    if (override === 'closed') return false;
+    return isWithinOpenHours();
+  }
+  function renderStoreStatus() {
+    const dict = currentDict();
+    const el = document.getElementById('storeStatus');
+    const textEl = document.getElementById('storeStatusText');
+    const open = isStoreOpen();
+    el.classList.toggle('is-open', open);
+    el.classList.toggle('is-closed', !open);
+    const override = getManualOverride();
+    const overrideTxt = override ? ' ' + dict.manualOverrideNote : '';
+    textEl.textContent = (open ? dict.storeOpenText : dict.storeClosedText) + overrideTxt;
+
+    const closedBanner = document.getElementById('closedBanner');
+    const checkoutBtn = document.getElementById('checkoutBtn');
+    if (!open) {
+      closedBanner.textContent = dict.closedMessage;
+      closedBanner.classList.add('show');
+      checkoutBtn.disabled = true;
+    } else {
+      closedBanner.classList.remove('show');
+      checkoutBtn.disabled = false;
+    }
+  }
+  // secret 15-tap toggle (manual override cycles: auto -> open -> closed -> auto)
+  let tapCount = 0;
+  let tapResetTimer = null;
+  document.getElementById('storeStatus').addEventListener('click', () => {
+    clearTimeout(tapResetTimer);
+    tapCount++;
+    tapResetTimer = setTimeout(() => { tapCount = 0; }, 3000);
+    if (tapCount >= 15) {
+      tapCount = 0;
+      const current = getManualOverride();
+      const next = current === null ? 'open' : (current === 'open' ? 'closed' : null);
+      try {
+        if (next === null) localStorage.removeItem('aldarfood_manual_status');
+        else localStorage.setItem('aldarfood_manual_status', next);
+      } catch (e) {}
+      renderStoreStatus();
+      showToast('🔐 ' + (next || 'auto'));
+    }
+  });
+  renderStoreStatus();
+  setInterval(renderStoreStatus, 60000);
 
   function updateCartBadge() {
-    const totalQty = Object.values(cart).reduce((a, b) => a + b, 0);
+    const dict = currentDict();
+    const totalQty = cartLines.reduce((s, l) => s + l.qty, 0);
     const badge = document.getElementById('cartBadge');
     badge.textContent = totalQty;
     badge.style.display = totalQty > 0 ? 'flex' : 'none';
+
+    const stickyBar = document.getElementById('stickyCartBar');
+    const stickyText = document.getElementById('stickyCartText');
+    if (totalQty > 0) {
+      stickyText.textContent = `🛒 ${totalQty} ${dict.pieces}`;
+      stickyBar.classList.add('show');
+    } else {
+      stickyBar.classList.remove('show');
+    }
   }
 
   function renderCartItems() {
@@ -1454,71 +1958,154 @@
     const list = document.getElementById('cartItemsList');
     const dividerLine = document.getElementById('cartDividerLine');
     const totalRow = document.getElementById('cartTotalRow');
-    const entries = MENU_ITEM_IDS.filter(id => cart[id] > 0);
 
-    if (entries.length === 0) {
+    if (cartLines.length === 0) {
       list.innerHTML = `<div class="cart-empty">${dict.cartEmpty}</div>`;
       dividerLine.style.display = 'none';
       totalRow.style.display = 'none';
       return;
     }
 
-    list.innerHTML = entries.map(id => `
-      <div class="cart-item-row">
-        <span class="cart-item-name">${dict[id]}</span>
+    list.innerHTML = cartLines.map(line => {
+      const opts = ITEM_OPTIONS[line.itemId];
+      const sizeLabel = opts.sizes[line.sizeIdx] ? localField(opts.sizes[line.sizeIdx]) : '';
+      const addonLabels = line.addonIdxs.map(i => localField(opts.addons[i])).join(', ');
+      const detailBits = [sizeLabel, addonLabels, line.note].filter(Boolean).join(' · ');
+      return `
+      <div class="cart-item-row" style="flex-wrap:wrap;">
+        <span class="cart-item-name">${dict[line.itemId]}${detailBits ? `<br><small style="opacity:.6;font-weight:400;">${detailBits}</small>` : ''}</span>
         <span class="cart-item-price">${dict.priceTBD}</span>
         <div class="qty-stepper">
-          <button type="button" class="qty-btn" data-action="dec" data-id="${id}">−</button>
-          <span class="qty-value">${cart[id]}</span>
-          <button type="button" class="qty-btn" data-action="inc" data-id="${id}">+</button>
+          <button type="button" class="qty-btn" data-action="dec" data-uid="${line.uid}">−</button>
+          <span class="qty-value">${line.qty}</span>
+          <button type="button" class="qty-btn" data-action="inc" data-uid="${line.uid}">+</button>
         </div>
-      </div>
-    `).join('');
+      </div>`;
+    }).join('');
 
     dividerLine.style.display = 'block';
     totalRow.style.display = 'flex';
-    const totalQty = entries.reduce((sum, id) => sum + cart[id], 0);
+    const totalQty = cartLines.reduce((s, l) => s + l.qty, 0);
     document.getElementById('cartTotalValue').textContent = `${totalQty} ${dict.pieces} — ${dict.priceTBD}`;
   }
 
-  function addToCart(id, btn) {
-    cart[id] = (cart[id] || 0) + 1;
-    updateCartBadge();
-    renderCartItems();
-    if (btn) {
-      btn.classList.add('added');
-      setTimeout(() => btn.classList.remove('added'), 350);
-    }
-  }
-
-  function changeQty(id, delta) {
-    cart[id] = Math.max(0, (cart[id] || 0) + delta);
-    updateCartBadge();
-    renderCartItems();
-  }
-
-  // menu add-to-cart buttons
-  document.querySelectorAll('.mi-add-btn').forEach(btn => {
-    btn.addEventListener('click', () => addToCart(btn.getAttribute('data-id'), btn));
-  });
-
-  // cart items list delegation (qty +/-)
   document.getElementById('cartItemsList').addEventListener('click', (e) => {
     const btn = e.target.closest('.qty-btn');
     if (!btn) return;
-    const id = btn.getAttribute('data-id');
+    const uid = btn.getAttribute('data-uid');
     const delta = btn.getAttribute('data-action') === 'inc' ? 1 : -1;
-    changeQty(id, delta);
+    const line = cartLines.find(l => String(l.uid) === uid);
+    if (!line) return;
+    line.qty = Math.max(0, line.qty + delta);
+    if (line.qty === 0) cartLines = cartLines.filter(l => l !== line);
+    updateCartBadge();
+    renderCartItems();
   });
 
-  // open / close cart drawer
-  const cartBtn = document.getElementById('cartBtn');
+  // ---- item customization drawer ----
+  const optionsDrawer = document.getElementById('optionsDrawer');
+  const optionsOverlay = document.getElementById('optionsOverlay');
+  let activeItemId = null;
+  let activeSizeIdx = 0;
+  let activeAddonIdxs = new Set();
+  let activeQty = 1;
+
+  function openOptionsDrawer(itemId) {
+    activeItemId = itemId;
+    activeSizeIdx = 0;
+    activeAddonIdxs = new Set();
+    activeQty = 1;
+    const dict = currentDict();
+    const opts = ITEM_OPTIONS[itemId];
+
+    document.getElementById('optionsItemName').textContent = dict[itemId];
+    document.getElementById('optionsQtyValue').textContent = '1';
+    document.getElementById('optionsNote').value = '';
+
+    const sizeList = document.getElementById('optionsSizeList');
+    sizeList.innerHTML = opts.sizes.map((s, i) => `
+      <label class="option-pill ${i === 0 ? 'selected' : ''}" data-idx="${i}">
+        <input type="radio" name="sizeOpt" ${i === 0 ? 'checked' : ''}> ${localField(s)}
+      </label>`).join('');
+
+    const addonsList = document.getElementById('optionsAddonsList');
+    addonsList.innerHTML = opts.addons.map((a, i) => `
+      <label class="option-pill" data-idx="${i}">
+        <input type="checkbox"> ${localField(a)} <span class="opt-plus">${dict.priceTBD}</span>
+      </label>`).join('');
+
+    sizeList.querySelectorAll('.option-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        activeSizeIdx = parseInt(pill.getAttribute('data-idx'), 10);
+        sizeList.querySelectorAll('.option-pill').forEach(p => p.classList.remove('selected'));
+        pill.classList.add('selected');
+        pill.querySelector('input').checked = true;
+      });
+    });
+    addonsList.querySelectorAll('.option-pill').forEach(pill => {
+      pill.addEventListener('click', (e) => {
+        const idx = parseInt(pill.getAttribute('data-idx'), 10);
+        const input = pill.querySelector('input');
+        if (e.target !== input) input.checked = !input.checked;
+        if (input.checked) { activeAddonIdxs.add(idx); pill.classList.add('selected'); }
+        else { activeAddonIdxs.delete(idx); pill.classList.remove('selected'); }
+      });
+    });
+
+    optionsDrawer.classList.add('open');
+    optionsOverlay.classList.add('open');
+  }
+  function closeOptionsDrawer() {
+    optionsDrawer.classList.remove('open');
+    optionsOverlay.classList.remove('open');
+  }
+  document.getElementById('optionsCloseBtn').addEventListener('click', closeOptionsDrawer);
+  optionsOverlay.addEventListener('click', closeOptionsDrawer);
+  document.getElementById('optionsQtyDec').addEventListener('click', () => {
+    activeQty = Math.max(1, activeQty - 1);
+    document.getElementById('optionsQtyValue').textContent = activeQty;
+  });
+  document.getElementById('optionsQtyInc').addEventListener('click', () => {
+    activeQty = activeQty + 1;
+    document.getElementById('optionsQtyValue').textContent = activeQty;
+  });
+  document.getElementById('optionsConfirmBtn').addEventListener('click', () => {
+    const dict = currentDict();
+    cartLines.push({
+      uid: uidCounter++,
+      itemId: activeItemId,
+      sizeIdx: activeSizeIdx,
+      addonIdxs: Array.from(activeAddonIdxs),
+      note: document.getElementById('optionsNote').value.trim(),
+      qty: activeQty
+    });
+    updateCartBadge();
+    renderCartItems();
+    closeOptionsDrawer();
+    showToast(`${dict[activeItemId]} ${dict.toastAdded}`);
+  });
+
+  document.querySelectorAll('.mi-add-btn').forEach(btn => {
+    btn.addEventListener('click', () => openOptionsDrawer(btn.getAttribute('data-id')));
+  });
+
+  // ---- cart drawer open/close ----
+  const cartBtn = document.getElementById('bnCart');
   const cartDrawer = document.getElementById('cartDrawer');
   const cartOverlay = document.getElementById('cartOverlay');
   const cartCloseBtn = document.getElementById('cartCloseBtn');
 
+  function updateReorderBanner() {
+    const banner = document.getElementById('reorderBanner');
+    let last = null;
+    try { last = JSON.parse(localStorage.getItem('aldarfood_last_order') || 'null'); } catch (e) {}
+    banner.classList.toggle('show', !!last && cartLines.length === 0);
+  }
+
   function openCart() {
     renderCartItems();
+    renderStoreStatus();
+    updateReorderBanner();
     cartDrawer.classList.add('open');
     cartOverlay.classList.add('open');
   }
@@ -1527,8 +2114,23 @@
     cartOverlay.classList.remove('open');
   }
   cartBtn.addEventListener('click', openCart);
+  document.getElementById('stickyCartBar').addEventListener('click', openCart);
   cartCloseBtn.addEventListener('click', closeCart);
   cartOverlay.addEventListener('click', closeCart);
+
+  document.getElementById('reorderBtn').addEventListener('click', () => {
+    let last = null;
+    try { last = JSON.parse(localStorage.getItem('aldarfood_last_order') || 'null'); } catch (e) {}
+    if (!last) return;
+    cartLines = last.lines.map(l => ({ ...l, uid: uidCounter++ }));
+    document.getElementById('custName').value = last.name || '';
+    document.getElementById('custPhone').value = last.phone || '';
+    if (last.delivery === 'pickup') optPickup.click();
+    else if (last.delivery === 'delivery') { optDelivery.click(); document.getElementById('custAddress').value = last.address || ''; }
+    updateCartBadge();
+    renderCartItems();
+    updateReorderBanner();
+  });
 
   // delivery method toggle
   const optPickup = document.getElementById('optPickup');
@@ -1546,6 +2148,9 @@
     optPickup.classList.remove('selected');
     addressField.classList.add('show');
   });
+  let selectedDelivery = null;
+  let selectedDonation = 0;
+  let donationMode = 'fixed';
 
   // donation buttons
   const donationBtns = document.querySelectorAll('.donation-btn');
@@ -1584,25 +2189,36 @@
   const editOrderBtn = document.getElementById('editOrderBtn');
 
   checkoutBtn.addEventListener('click', () => {
+    if (checkoutBtn.disabled) return;
     const dict = currentDict();
-    const entries = MENU_ITEM_IDS.filter(id => cart[id] > 0);
     const name = document.getElementById('custName').value.trim();
     const phone = document.getElementById('custPhone').value.trim();
     const address = document.getElementById('custAddress').value.trim();
 
-    if (entries.length === 0) { alert(dict.validationCart); return; }
+    if (cartLines.length === 0) { alert(dict.validationCart); return; }
     if (!name) { alert(dict.validationName); return; }
     if (!phone) { alert(dict.validationPhone); return; }
     if (!selectedDelivery) { alert(dict.validationDelivery); return; }
     if (selectedDelivery === 'delivery' && !address) { alert(dict.validationAddress); return; }
     if (donationMode === 'custom' && selectedDonation > 0 && selectedDonation < 1) { alert(dict.validationDonation); return; }
 
-    const totalQty = entries.reduce((sum, id) => sum + cart[id], 0);
+    const totalQty = cartLines.reduce((s, l) => s + l.qty, 0);
+    let orderSeq = 1;
+    try { orderSeq = parseInt(localStorage.getItem('aldarfood_order_seq') || '0', 10) + 1; localStorage.setItem('aldarfood_order_seq', String(orderSeq)); } catch (e) { orderSeq = Math.floor(1000 + Math.random() * 9000); }
+    const orderNumber = 'AD-' + (1000 + orderSeq);
     const lines = [];
     lines.push(dict.invoiceTitleTxt);
+    lines.push(`${dict.orderNumberLabel} #${orderNumber}`);
     lines.push('------------------------------');
-    entries.forEach(id => {
-      lines.push(`${dict[id]} × ${cart[id]}`);
+    cartLines.forEach(line => {
+      const opts = ITEM_OPTIONS[line.itemId];
+      const sizeLabel = opts.sizes[line.sizeIdx] ? localField(opts.sizes[line.sizeIdx]) : '';
+      const addonLabels = line.addonIdxs.map(i => localField(opts.addons[i])).join(', ');
+      let entry = `${dict[line.itemId]} × ${line.qty}`;
+      if (sizeLabel) entry += ` (${sizeLabel})`;
+      if (addonLabels) entry += ` + ${addonLabels}`;
+      if (line.note) entry += `\n   📝 ${line.note}`;
+      lines.push(entry);
     });
     lines.push('------------------------------');
     lines.push(`${dict.invoiceTotalQtyLabel}: ${totalQty} ${dict.invoiceQtyWord} ${dict.invoicePriceNote}`);
@@ -1622,7 +2238,15 @@
 
     const invoiceStr = lines.join('\n');
     invoiceText.textContent = invoiceStr;
+    document.getElementById('orderNumberDisplay').textContent = '🧾 #' + orderNumber;
     sendWhatsappBtn.href = `https://wa.me/491631327157?text=${encodeURIComponent(invoiceStr)}`;
+
+    try {
+      localStorage.setItem('aldarfood_last_order', JSON.stringify({
+        lines: cartLines.map(({uid, ...rest}) => rest),
+        name, phone, delivery: selectedDelivery, address
+      }));
+    } catch (e) {}
 
     orderForm.style.display = 'none';
     invoiceView.style.display = 'block';
